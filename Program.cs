@@ -18,17 +18,19 @@ using System.Text;
 /*
  * _____________________________________________________________________________________________
    |                                 this code is from                                          |
-   |                                        ()                                                  |
+   |                  (https://github.com/EveryTGames/Contacts-Manager)                         |
    |                           ******************************                                   |
    |                            Contacts manager v2.1 BY ETG                                    |
-   |       this program made completly by me from 05/02/2024 till 08/02/2024 as a task for      |
-   |     CAT Realoded Team anyone can reuse the code and edit it but please till me through     |
-   |             the github page at this url ()to learn from your edits, and sorry              |
-   |                 for the spelling mistakes in the program                                   |
-   |                         im too lazy to recheck it :)                                       |
+   |      this program made completly by me from 05/02/2024 till 08/02/2024 as a task for       |
+   |    CAT Realoded Team anyone can reuse the code and edit it but please till me through      |
+   |                             the github page at this url                                    |
+   |                (https://github.com/EveryTGames/Contacts-Manager/pulls)                     |
+   |                        to learn from your edits, and sorry                                 |
+   |                    for the spelling mistakes in the program                                |
+   |                            im too lazy to recheck it :)                                    |
    |                                    *********                                               |
    |                                this code is from                                           |
-   |                                       ()                                                   |
+   |                   (https://github.com/EveryTGames/Contacts-Manager)                        |
    |                                                                                            |
    |                                                                                            |
  * |____________________________________________________________________________________________|
