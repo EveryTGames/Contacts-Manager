@@ -740,10 +740,8 @@ press an key to start ...");
         public static void show_all_users_page(ref Contact _contact)
         {
             Console.Clear();
-            Console.Clear();
-            Console.Clear();
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
+
+            coloring();
 
             contact_manager.save(Program.contacts);
 
@@ -809,10 +807,8 @@ press an key to start ...");
         public static void show_all_user_data_page(ref Contact _contact, ref user _user_)
         {
             Console.Clear();
-            Console.Clear();
-            Console.Clear();
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            coloring();
 
             contact_manager.save(Program.contacts);
             Console.WriteLine("----------------------show all user data page--------------------------");
@@ -868,14 +864,21 @@ press an key to start ...");
 
 
         }
+        static void coloring()//just to change the color betwean pages to give more readability
+        {
+            if (Console.ForegroundColor == ConsoleColor.Green)
+                Console.ForegroundColor = ConsoleColor.Red;
+            else
+                Console.ForegroundColor = ConsoleColor.Green;
+
+        }
 
         public static void edit_the_array_page(ref Contact _contact, ref user _user_, string selected_category)
         {
             Console.Clear();
-            Console.Clear();
-            Console.Clear();
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Red;
+          
+            coloring();
+            
 
             Console.WriteLine("----------------------edit the array page--------------------------");
             Console.WriteLine("[1]edit a data type   [2]add a data type    [3]delet a data type   [Esc]cancel");
@@ -985,10 +988,8 @@ press an key to start ...");
         public static void search_page(Contact _contact = null)
         {
             Console.Clear();
-            Console.Clear();
-            Console.Clear();
-            Console.Clear();
-        Console.ForegroundColor = ConsoleColor.Yellow;
+
+            coloring();
 
             Console.WriteLine("----------------------search page--------------------------");
             Console.WriteLine("[0]search again      [1]open a contact      [2]open user        [Esc]cancel");
@@ -1249,6 +1250,14 @@ namespace input
             bool deletable;
             while (on)
             {
+                if(input.Length >= 9 && (type == 0 || type == 3))
+                {
+                    on = false;
+                    temp = input.ToString().Substring(0,9);
+                    input.Clear();
+                    return temp;
+                    
+                }
                 (int x, int y) = (Console.CursorLeft, Console.CursorTop);
 
                 key = Console.ReadKey();
