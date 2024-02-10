@@ -1,0 +1,7 @@
+D:\vsprojects\cat_task2_final\bin\Debug\cat_task2_final.exe.config
+D:\vsprojects\cat_task2_final\bin\Debug\cat_task2_final.exe
+D:\vsprojects\cat_task2_final\bin\Debug\cat_task2_final.pdb
+D:\vsprojects\cat_task2_final\obj\Debug\cat_task2_final.csproj.AssemblyReference.cache
+D:\vsprojects\cat_task2_final\obj\Debug\cat_task2_final.csproj.CoreCompileInputs.cache
+D:\vsprojects\cat_task2_final\obj\Debug\cat_task2_final.exe
+D:\vsprojects\cat_task2_final\obj\Debug\cat_task2_final.pdb

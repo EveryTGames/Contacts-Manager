@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA43959D-58FC-4D32-88C1-798D4F26E06D}</ProjectGuid>
+    <ProjectGuid>{A8344681-D253-4E21-B75A-C22DEB2EDFEC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>cat_task2</RootNamespace>
-    <AssemblyName>cat_task2</AssemblyName>
+    <RootNamespace>cat_task2_final</RootNamespace>
+    <AssemblyName>cat_task2_final</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adress.cs" />
+    <Compile Include="Contact.cs" />
+    <Compile Include="contact_manager.cs" />
+    <Compile Include="Email.cs" />
+    <Compile Include="Input.cs" />
+    <Compile Include="pages.cs" />
+    <Compile Include="Phone.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
