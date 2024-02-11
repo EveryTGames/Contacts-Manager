@@ -356,7 +356,7 @@ namespace cat_task2_final
             coloring();
 
             Console.WriteLine("----------------------search page--------------------------");
-            Console.WriteLine("[0]search again      [1]open a contact      [2]open user        [Esc]cancel");
+            Console.WriteLine("[0]search again      [1]open a contact(if searched in all contacts)      [2]open user        [Esc]cancel");
         dd: Console.WriteLine("-----------------------------------------------------------------------------------------------------");
             Console.WriteLine("please enter the value u want to search for");
             string value = option(4, false, true);
