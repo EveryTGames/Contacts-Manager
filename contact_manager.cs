@@ -16,14 +16,14 @@ namespace cat_task2_final
             contact_manager obj = new contact_manager();
             IFormatter formatter = new BinaryFormatter();
             obj.contacts = _contacts;
-            Stream stream = new FileStream(@"\saved_contacts.txt", FileMode.Create, FileAccess.Write);
+            Stream stream = new FileStream(@"saved_contacts.txt", FileMode.Create, FileAccess.Write);
             formatter.Serialize(stream, obj);
             stream.Close();
         }
         public static List<Contact> load()
         {
 
-            Stream stream = new FileStream(@"\saved_contacts.txt", FileMode.Open, FileAccess.Read);
+            Stream stream = new FileStream(@"saved_contacts.txt", FileMode.Open, FileAccess.Read);
             IFormatter formatter = new BinaryFormatter();
 
             contact_manager obj = (contact_manager)formatter.Deserialize(stream);

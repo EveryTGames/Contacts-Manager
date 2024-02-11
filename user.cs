@@ -318,7 +318,7 @@ namespace cat_task2_final
                     {
                         Console.WriteLine($"enter the number of {variable}");
                         int size = int.Parse(Input.handle_input(0, false));
-
+                        
                         this.addTo(variable, size);
 
 

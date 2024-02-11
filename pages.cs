@@ -192,7 +192,7 @@ namespace cat_task2_final
             Console.WriteLine("-----------------------------------------------");
 
 
-            _user_.ToString();
+            _user_.ToString(_contact.users.IndexOf(_user_));
             Console.WriteLine("-----------------------------------------------");
         aa: int ans = int.Parse(option(-1, true));
             switch (ans)
@@ -312,9 +312,14 @@ namespace cat_task2_final
 
                     break;
                 case 3:
-                        Console.WriteLine("enter the number of things u want to delete");
+                cc: Console.WriteLine("enter the number of things u want to delete");
                     int n = int.Parse(option(0, false, true));
-                 Console.WriteLine("enter the indexes of things u want to delete(it starts from zero and press enter after each index)");
+                    if (n > _user[selected_category, typeof(user)].result.Count)
+                    {
+                        Console.WriteLine("what u entered is larger than the number of elements,try again");
+                        goto cc;
+                    }
+                dd: Console.WriteLine("enter the indexes of things u want to delete(it starts from zero and press enter after each index)");
 
 
                     int[] n_removed_obj = new int[n];
@@ -324,7 +329,7 @@ namespace cat_task2_final
                         if (n_removed_obj[i] >= _user[selected_category, typeof(user)].result.Count)
                         {
                             Console.WriteLine("not found, please remember to creat one if needed and the index starts from 0,enter the option again");
-                            goto aa;
+                            goto dd;
                         }
                     }
                     _user.delete(selected_category, n_removed_obj);
@@ -344,7 +349,7 @@ namespace cat_task2_final
 
 
         }
-        public static void search_page(Contact _contact = null)
+        public static void search_page(Contact _contact = null)//if not null it means that the search is in a single contact
         {
             Console.Clear();
 
@@ -368,6 +373,7 @@ namespace cat_task2_final
                     if (temp == null)
                     {
                         Console.WriteLine("nothing found");
+                        _contacts.Add(temp);
                     }
                     else
                     {
@@ -378,7 +384,7 @@ namespace cat_task2_final
                         Console.WriteLine("-----------------------------------------------");
                         foreach (user _user in temp)
                         {
-                            _user.ToString();
+                            _user.ToString(temp.IndexOf(_user));
 
                         }
                         Console.WriteLine("------------------------------------------------------");
@@ -409,6 +415,11 @@ namespace cat_task2_final
                     goto dd;
 
                 case 1:
+                    if (_contact != null)
+                    {
+                        Console.WriteLine("you searched in a contact,no contacts to open,chooose one of the options again");
+                        goto aa;
+                    }
                     Console.Write("enter the index for the contact you want to open (it starts from 0)");
                     ans = int.Parse(option(0, false, true));
                     if (ans >= _contacts.Count)
@@ -424,27 +435,52 @@ namespace cat_task2_final
 
                     break;
                 case 2:
-                    Console.Write("enter the index for the contact then press enter then the user you want to open (it starts from 0 for each contact)");
-                    int x = int.Parse(option(0, false, true));
-                    if (x >= _contacts.Count)
+                    if (_contact == null)
                     {
-                        Console.WriteLine("not found, please remember the index starts from 0, choose one of the options again");
-                        goto aa;
+
+
+                        Console.Write("enter the index for the contact then press enter then the user you want to open (it starts from 0 for each contact)");
+                        int x = int.Parse(option(0, false, true));
+                        if (_contacts[x] == null)
+                        {
+                            Console.WriteLine("no users found in this contact, u cant open a user from it from the search, choose one of the options again");
+                            goto aa;
+                        }
+                        if (x >= _contacts.Count)
+                        {
+                            Console.WriteLine("not found, please remember the index starts from 0, choose one of the options again");
+                            goto aa;
+                        }
+                        else
+                        {
+                        bb: Console.WriteLine("enter the index for the user you want to open in this contact");
+                            ans = int.Parse(option(0, false, true));
+                          
+                            if (ans >= _contacts[x].Count)
+                            {
+                                Console.WriteLine("not found, please remember the index starts from 0, try again");
+                                goto bb;
+                            }
+                            Contact contact = Program.contacts[x];
+                            user _user = _contacts[x][ans];
+                            show_all_user_data_page(ref contact, ref _user);
+                        }
+
                     }
                     else
                     {
-                        Console.WriteLine("enter the index for the user you want to open in this contact");
-                    bb: ans = int.Parse(option(0, false, true));
-                        if (ans >= _contacts[x].Count)
+                    bb: Console.WriteLine("enter the index for the user you want to open in this contact");
+                        ans = int.Parse(option(0, false, true));
+                        if (ans >= _contact.users.Count)
                         {
                             Console.WriteLine("not found, please remember the index starts from 0, try again");
                             goto bb;
                         }
-                        Contact contact = Program.contacts[x];
-                        user _user = _contacts[x][ans];
-                        show_all_user_data_page(ref contact, ref _user);
-                    }
+                       
+                      user _user =  temp[ans];
+                        show_all_user_data_page(ref _contact, ref _user);
 
+                    }
                     break;
 
                 default:

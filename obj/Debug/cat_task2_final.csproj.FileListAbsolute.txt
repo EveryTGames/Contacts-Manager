@@ -5,3 +5,10 @@ D:\vsprojects\cat_task2_final\obj\Debug\cat_task2_final.csproj.AssemblyReference
 D:\vsprojects\cat_task2_final\obj\Debug\cat_task2_final.csproj.CoreCompileInputs.cache
 D:\vsprojects\cat_task2_final\obj\Debug\cat_task2_final.exe
 D:\vsprojects\cat_task2_final\obj\Debug\cat_task2_final.pdb
+C:\Users\user1\Downloads\Contacts-Manager-main\Contacts-Manager-main\bin\Debug\cat_task2_final.exe.config
+C:\Users\user1\Downloads\Contacts-Manager-main\Contacts-Manager-main\bin\Debug\cat_task2_final.exe
+C:\Users\user1\Downloads\Contacts-Manager-main\Contacts-Manager-main\bin\Debug\cat_task2_final.pdb
+C:\Users\user1\Downloads\Contacts-Manager-main\Contacts-Manager-main\obj\Debug\cat_task2_final.csproj.AssemblyReference.cache
+C:\Users\user1\Downloads\Contacts-Manager-main\Contacts-Manager-main\obj\Debug\cat_task2_final.csproj.CoreCompileInputs.cache
+C:\Users\user1\Downloads\Contacts-Manager-main\Contacts-Manager-main\obj\Debug\cat_task2_final.exe
+C:\Users\user1\Downloads\Contacts-Manager-main\Contacts-Manager-main\obj\Debug\cat_task2_final.pdb
